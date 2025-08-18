@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "symbiote"
+version = "0.1.0"
+description = "Cognitive Prosthetic - Local-first thought capture and context assembly system"
+authors = ["Symbiote Team"]
+license = "MIT"
+readme = "README.md"
+python = "^3.11"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+# Core
+aiofiles = "^23.2.1"
+aiohttp = "^3.9.0"
+asyncio = "^3.4.3"
+pyyaml = "^6.0.1"
+pydantic = "^2.5.0"
+ulid-py = "^1.1.0"
+click = "^8.1.7"
+rich = "^13.7.0"
+watchdog = "^4.0.0"
+
+# Storage & Indexing
+duckdb = "^0.10.0"
+tantivy = "^0.22.0"
+lancedb = "^0.6.0"
+sentence-transformers = "^2.5.0"
+
+# Markdown processing
+python-frontmatter = "^1.1.0"
+markdown-it-py = "^3.0.0"
+
+# Platform integrations
+pywin32 = {version = "^306", markers = "sys_platform == 'win32'"}
+pyobjc = {version = "^10.1", markers = "sys_platform == 'darwin'"}
+python-xlib = {version = "^0.33", markers = "sys_platform == 'linux'"}
+pywinctl = "^0.3"
+
+# Utils
+loguru = "^0.7.2"
+httpx = "^0.26.0"
+orjson = "^3.9.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+pytest-benchmark = "^4.0.0"
+black = "^24.0.0"
+ruff = "^0.2.0"
+mypy = "^1.8.0"
+
+[tool.poetry.scripts]
+sym = "symbiote.cli.sym:main"
+sym-daemon = "symbiote.daemon.main:main"
+sym-doctor = "symbiote.scripts.doctor:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true

@@ -1,0 +1,27 @@
+# Core dependencies
+aiofiles>=23.2.1
+aiohttp>=3.9.0
+pyyaml>=6.0.1
+pydantic>=2.5.0
+ulid-py>=1.1.0
+click>=8.1.7
+rich>=13.7.0
+watchdog>=4.0.0
+loguru>=0.7.2
+httpx>=0.26.0
+orjson>=3.9.10
+psutil>=5.9.0
+python-frontmatter>=1.1.0
+markdown-it-py>=3.0.0
+
+# Storage & Indexing
+duckdb>=0.10.0
+# tantivy>=0.22.0  # Uncomment when implementing FTS
+# lancedb>=0.6.0  # Uncomment when implementing vector search
+# sentence-transformers>=2.5.0  # Uncomment for embeddings
+
+# Platform-specific (install as needed)
+# pywin32>=306  # Windows only
+# pyobjc>=10.1  # macOS only
+# python-xlib>=0.33  # Linux only
+# pywinctl>=0.3  # For active window detection
