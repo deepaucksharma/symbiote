@@ -1,0 +1,20 @@
+{"query": "Q3 strategy", "relevant": ["01ABC123456789012345678901", "01DEF123456789012345678901"], "notes": "High-level outline and KPIs note"}
+{"query": "WebRTC implementation", "relevant": ["01GHI123456789012345678901", "01JKL123456789012345678901", "01MNO123456789012345678901"], "notes": "Architecture decisions and open questions"}
+{"query": "API redesign", "relevant": ["01PQR123456789012345678901", "01STU123456789012345678901"], "notes": "REST best practices and authentication"}
+{"query": "performance optimization", "relevant": ["01VWX123456789012345678901", "01YZA123456789012345678901"], "notes": "Latency improvements and memory profiling"}
+{"query": "team expansion hiring", "relevant": ["01BCD123456789012345678901", "01EFG123456789012345678901"], "notes": "Role requirements and interview process"}
+{"query": "security audit findings", "relevant": ["01HIJ123456789012345678901"], "notes": "Vulnerability assessment and remediation plan"}
+{"query": "customer feedback portal", "relevant": ["01KLM123456789012345678901", "01NOP123456789012345678901"], "notes": "User requirements and UX mockups"}
+{"query": "data pipeline architecture", "relevant": ["01QRS123456789012345678901", "01TUV123456789012345678901", "01WXY123456789012345678901"], "notes": "ETL design and streaming considerations"}
+{"query": "mobile app MVP features", "relevant": ["01ZAB123456789012345678901", "01CDE123456789012345678901"], "notes": "Core functionality and platform constraints"}
+{"query": "documentation update process", "relevant": ["01FGH123456789012345678901"], "notes": "Version control and review workflow"}
+{"query": "bug #573 memory leak", "relevant": ["01IJK123456789012345678901", "01LMN123456789012345678901"], "notes": "Root cause analysis and fix verification"}
+{"query": "deployment staging checklist", "relevant": ["01OPQ123456789012345678901", "01RST123456789012345678901"], "notes": "Pre-deployment validation and rollback plan"}
+{"query": "meeting notes product roadmap", "relevant": ["01UVW123456789012345678901", "01XYZ123456789012345678901", "01ABC234567890123456789012"], "notes": "Q3/Q4 priorities and resource allocation"}
+{"query": "database migration plan", "relevant": ["01DEF234567890123456789012"], "notes": "Schema changes and zero-downtime strategy"}
+{"query": "frontend component library", "relevant": ["01GHI234567890123456789012", "01JKL234567890123456789012"], "notes": "Reusable components and design system"}
+{"query": "infrastructure cost analysis", "relevant": ["01MNO234567890123456789012", "01PQR234567890123456789012"], "notes": "Cloud spend optimization and reserved instances"}
+{"query": "machine learning model training", "relevant": ["01STU234567890123456789012"], "notes": "Dataset preparation and hyperparameter tuning"}
+{"query": "user onboarding flow", "relevant": ["01VWX234567890123456789012", "01YZA234567890123456789012"], "notes": "Tutorial design and activation metrics"}
+{"query": "API rate limiting implementation", "relevant": ["01BCD234567890123456789012"], "notes": "Token bucket algorithm and Redis integration"}
+{"query": "weekly standup updates", "relevant": ["01EFG234567890123456789012", "01HIJ234567890123456789012", "01KLM234567890123456789012"], "notes": "Team progress and blockers"}

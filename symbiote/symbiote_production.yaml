@@ -1,0 +1,134 @@
+# Symbiote Production Configuration
+# This configuration enables full production mode with real implementations
+
+# Core Settings
+vault_path: ./vault
+storage_path: ./storage
+production_mode: true
+
+# Search Configuration
+search:
+  enable_cache: true
+  cache_ttl: 300
+  cache_size: 100
+  timeout_ms: 300
+  quality_threshold: 0.55
+  strategies:
+    - fts
+    - vector
+    - recents
+
+# Vector Search Configuration
+vector:
+  model: all-MiniLM-L6-v2  # Sentence transformer model
+  dimension: 384
+  use_gpu: false
+  index_type: faiss
+  chunk_size: 512
+  chunk_overlap: 128
+  similarity_threshold: 0.5
+
+# Full-Text Search Configuration
+fts:
+  use_stemming: true
+  use_ngrams: false
+  min_df: 2
+  max_df: 0.8
+  max_features: 1000
+
+# Synthesis Configuration
+synthesis:
+  enabled: true
+  interval_minutes: 5
+  pattern_detection:
+    - temporal_trends
+    - topic_evolution
+    - connection_discovery
+    - workflow_patterns
+    - knowledge_gaps
+  min_confidence: 0.6
+
+# Privacy Configuration
+privacy:
+  mode: strict
+  allow_cloud: false
+  mask_pii_default: true
+  consent_required: true
+  audit_logging: true
+  pii_detection:
+    use_nlp: true
+    patterns:
+      - email
+      - phone
+      - ssn
+      - credit_card
+      - person_name
+      - location
+
+# Error Handling Configuration
+error_handling:
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 5
+    recovery_timeout: 60
+  retry_policy:
+    max_retries: 3
+    base_delay: 1.0
+    max_delay: 60.0
+    exponential_base: 2.0
+    jitter: true
+  recovery:
+    enabled: true
+    strategies:
+      - file_recovery
+      - permission_fix
+      - connection_retry
+      - memory_cleanup
+
+# Performance Configuration
+performance:
+  max_workers: 4
+  batch_size: 100
+  memory_limit_mb: 1500
+  capture_timeout_ms: 200
+  search_timeout_ms: 300
+
+# Monitoring Configuration
+monitoring:
+  metrics_enabled: true
+  health_check_interval: 60
+  alert_thresholds:
+    error_rate: 0.1
+    latency_p99: 500
+    memory_usage: 0.9
+
+# Feature Flags
+features:
+  use_production_search: true
+  use_production_synthesis: true
+  use_production_privacy: true
+  use_ml_algorithms: true
+  use_advanced_clustering: true
+  enable_auto_recovery: true
+
+# Logging Configuration
+logging:
+  level: INFO
+  file: ./logs/symbiote.log
+  max_size_mb: 100
+  backup_count: 5
+  format: "{time} | {level} | {module}:{function}:{line} | {message}"
+
+# Dependencies to Install
+# Run: pip install -r requirements_production.txt
+dependencies:
+  - sentence-transformers
+  - faiss-cpu  # or faiss-gpu if GPU available
+  - whoosh
+  - scikit-learn
+  - pandas
+  - numpy
+  - spacy
+  - cryptography
+  - duckdb
+  - pyyaml

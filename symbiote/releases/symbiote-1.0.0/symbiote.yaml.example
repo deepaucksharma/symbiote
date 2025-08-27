@@ -1,0 +1,30 @@
+vault_path: "/home/deepak/src/Tormentum/symbiote/vault"
+hotkeys:
+  capture: "Ctrl+Shift+Space"
+  search: "Ctrl+Shift+F"
+indices:
+  fts: true
+  vector: true
+  analytics: true
+embedding:
+  model: "all-MiniLM-L6-v2"
+  dim: 384
+  chunk_tokens: 512
+  overlap_tokens: 64
+llm:
+  provider: "ollama"
+  model: "qwen2.5:3b"
+  max_tokens: 256
+  temperature: 0.2
+privacy:
+  allow_cloud: false
+  redaction_default: true
+  mask_pii_default: true
+performance:
+  max_search_workers: 3
+  synthesis_interval_min: 5
+  memory_budget_mb: 1500
+synthesis:
+  interval_min: 5
+  suggest_link_threshold: 0.70
+  max_themes: 3
